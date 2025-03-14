@@ -1,0 +1,36 @@
+.header {
+    background: #50b0e7;
+    padding: 15px;
+    color: white;
+    text-align: center;
+  
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+  
+    &__title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  
+    &__nav {
+      display: flex;
+      gap: 15px;
+    }
+  
+    &__link {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+  
+      &:hover {
+        color: #ffcc00;
+      }
+    }
+  }
+  
