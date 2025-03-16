@@ -1,0 +1,10 @@
+<div *ngIf="pets.length > 0">
+  <ul>
+    <li *ngFor="let pet of pets">
+      <p><strong>{{ pet.name_mascota }}</strong> ({{ pet.breed_mascota }})</p>
+    </li>
+  </ul>
+</div>
+<ng-template #noPets>
+  <p>No hay mascotas registradas.</p>
+</ng-template>

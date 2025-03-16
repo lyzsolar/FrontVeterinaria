@@ -1,25 +1,51 @@
+<app-header></app-header>
 
-  <app-header></app-header>
+<!-- Contenedor para el formulario y la lista de mascotas -->
+<div class="home-container">
+  <!-- Contenedor del formulario de registro de mascota -->
+  <div class="form-container">
+    <div class="form">
+      <h2 class="form__title">Registro de Mascota</h2>
+      <form class="form__container" (ngSubmit)="onSubmit()">
+        <div class="form__group">
+          <label for="name" class="form__label">Nombre</label>
+          <input type="text" id="name" [(ngModel)]="pet.name_mascota" name="name_mascota" class="form__input" placeholder="Ej. Max" required />
+        </div>
 
-  <div class="form">
-    <h2 class="form__title">Registro de Mascota</h2>
-    <form class="form__container" (ngSubmit)="onSubmit()">
-      <div class="form__group">
-        <label for="name" class="form__label">Nombre</label>
-        <input type="text" id="name" [(ngModel)]="pet.name_mascota" name="name_mascota" class="form__input" placeholder="Ej. Max" required />
+        <div class="form__group">
+          <label for="breed" class="form__label">Raza</label>
+          <input type="text" id="breed" [(ngModel)]="pet.breed_mascota" name="breed_mascota" class="form__input" placeholder="Ej. Labrador" required />
+        </div>
+
+        <div class="form__actions">
+          <button type="submit" class="form__button">Guardar</button>
+          <button type="reset" class="form__button form__button--secondary">Cancelar</button>
+        </div>
+      </form>
+
+      <!-- Mensaje y botón de "Ver Mascotas Registradas" debajo del formulario -->
+      <div class="no-pets-message">
+        <div class="no-pets-card">
+          <p *ngIf="pets.length === 0">No hay mascotas registradas aún.</p>
+          <button (click)="togglePetsVisibility()" class="view-pets__button">
+            Ver Mascotas Registradas
+          </button>
+        </div>
       </div>
-  
-      <div class="form__group">
-        <label for="breed" class="form__label">Raza</label>
-        <input type="text" id="breed" [(ngModel)]="pet.breed_mascota" name="breed_mascota" class="form__input" placeholder="Ej. Labrador" required />
-      </div>
-  
-      <div class="form__actions">
-        <button type="submit" class="form__button">Guardar</button>
-        <button type="reset" class="form__button form__button--secondary">Cancelar</button>
-      </div>
-    </form>
+    </div>
   </div>
-  
-  <app-footer></app-footer>
+
+  <!-- Contenedor de la lista de mascotas -->
+  <div class="pets-list-container">
+    <!-- Mostrar la lista de mascotas solo cuando `isPetsVisible` sea true -->
+    <div *ngIf="isPetsVisible" class="pets-list-card">
+      <h3>Lista de Mascotas Registradas</h3>
+      <app-pet-list [pets]="pets"></app-pet-list>
+    </div>
+  </div>
+</div>
+
+
+<app-pet-list></app-pet-list>
+<app-footer></app-footer>
   

@@ -1,71 +1,138 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px; /* Separación de aproximadamente 8 cm entre el formulario y la card */
+  padding: 40px 20px; /* Espaciado alrededor */
+}
+
+.form-container, .pets-list-container {
+  width: 100%;
+  max-width: 400px; /* Ambos tienen el mismo ancho máximo */
+  display: flex;
+  flex-direction: column;
+}
+
 .form {
-    width: 100%;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form__container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .form__group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form__label {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  .form__input {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border 0.3s;
-  }
-  
-  .form__input:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
-  .form__actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  .form__button {
-    padding: 10px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .form__button:hover {
-    background-color: #0056b3;
-  }
-  
-  .form__button--secondary {
-    background-color: #dc3545;
-  }
-  
-  .form__button--secondary:hover {
-    background-color: #a71d2a;
-  }
-  
+  width: 100%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form__input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+
+.form__input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form__actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.form__button {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form__button:hover {
+  background-color: #0056b3;
+}
+
+.form__button--secondary {
+  background-color: #dc3545;
+}
+
+.form__button--secondary:hover {
+  background-color: #a71d2a;
+}
+
+.no-pets-message {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.no-pets-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.view-pets__button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-pets__button:hover {
+  background-color: #0056b3;
+}
+
+.pets-list-card {
+  width: 100%;
+  padding: 20px; /* Ajusté el padding para hacerla más pequeña */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 380px; /* Reducida la altura de la card */
+}
+
+.pets-list-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.pets-list-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pets-list-card li {
+  margin-bottom: 10px;
+}
+
+.pets-list-card p {
+  font-size: 14px;  /* Igual que el tamaño de letra del formulario */
+  margin: 0;
+}
